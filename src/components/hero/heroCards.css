@@ -1,0 +1,140 @@
+.card {
+    cursor: pointer;
+    animation-name: fadeIn;
+    animation-duration: 0.5s;
+}
+
+.card img {
+    border-radius: 5px;
+}
+
+.card:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    min-height: 100%;
+    top: 0;
+    background: linear-gradient(180deg, rgba(14, 14, 14, 0) 30.86%, #0e0e0e 100%);
+    opacity: 1;
+}
+
+.card:hover .cont__text {
+    opacity: 1;
+    transform: scale(1.05);
+}
+
+.card:hover img {
+    transform: scale(1.02);
+}
+
+.cont__text {
+    position: absolute;
+    bottom: 40px;
+    left: 20px;
+    color: white;
+    line-height: 1;
+    opacity: 0;
+    transition: 0.5s ease-in-out all;
+}
+
+.superHeroName {
+    font-weight: bold;
+    font-size: 40px;
+    font-family: 'Bebas Neue', cursive;
+    text-shadow: -2px 3px 3px black;
+}
+
+.alterEgo {
+    font-size: 20px;
+    text-shadow: -1px 1px 1px black;
+}
+
+.especificImg {
+    animation-name: backInLeft;
+    animation-duration: 1s;
+}
+
+@-webkit-keyframes backInLeft {
+    0% {
+        -webkit-transform: translateX(-2000px) scale(0.7);
+        transform: translateX(-2000px) scale(0.7);
+        opacity: 0.7;
+    }
+
+    80% {
+        -webkit-transform: translateX(0px) scale(0.7);
+        transform: translateX(0px) scale(0.7);
+        opacity: 0.7;
+    }
+
+    100% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes backInLeft {
+    0% {
+        -webkit-transform: translateX(-2000px) scale(0.7);
+        transform: translateX(-2000px) scale(0.7);
+        opacity: 0.7;
+    }
+
+    80% {
+        -webkit-transform: translateX(0px) scale(0.7);
+        transform: translateX(0px) scale(0.7);
+        opacity: 0.7;
+    }
+
+    100% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.animate__backInLeft {
+    -webkit-animation-name: backInLeft;
+    animation-name: backInLeft;
+}
+
+/* Fading entrances  */
+@-webkit-keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.animate__fadeIn {
+    -webkit-animation-name: fadeIn;
+    animation-name: fadeIn;
+}
+
+@-webkit-keyframes fadeInDown {
+    from {
+        opacity: 0;
+        -webkit-transform: translate3d(0, -100%, 0);
+        transform: translate3d(0, -100%, 0);
+    }
+
+    to {
+        opacity: 1;
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+}
